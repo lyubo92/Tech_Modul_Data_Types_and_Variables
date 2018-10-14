@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class refactorSpecialNumbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = Integer.parseInt(scanner.nextLine());
+        for (int i = 1; i <= number; i++) {
+            int sum = 0;
+            int currentNumn = i;
+            while (currentNumn > 0) {
+                sum += currentNumn % 10;
+                currentNumn = currentNumn / 10;
+            }
+            boolean special = (sum == 5) || (sum == 7) || (sum == 11);
+            String specialStr = "False";
+            if (special){
+                specialStr = "True";
+            }
+            System.out.printf("%d -> %s%n", i, specialStr);
+        }
+
+    }
+}
