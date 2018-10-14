@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+public class specialNumbers {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int number = Integer.parseInt(input.nextLine());
+        for (int i = 1; i <= number; i++) {
+            String special = "False";
+            int num = i;
+            int sum = 0;
+            while (num != 0){
+                int digit = num % 10;
+                sum += digit;
+                num /= 10;
+            }
+            if (sum == 5 || sum == 7 || sum == 11){
+                special = "True";
+            }
+            System.out.printf("%d -> %s%n",i, special);
+        }
+    }
+}
