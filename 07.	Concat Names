@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class concatNames {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String firstName = input.nextLine();
+        String secondName = input.nextLine();
+        String delimiter = input.nextLine();
+        System.out.println(firstName + delimiter + secondName);
+    }
+}
