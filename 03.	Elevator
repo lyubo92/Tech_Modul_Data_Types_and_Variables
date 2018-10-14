@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class elevator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double persons = Integer.parseInt(input.nextLine());
+        double capacity = Integer.parseInt(input.nextLine());
+        double courses = Math.ceil(persons / capacity);
+        System.out.printf("%.0f",courses);
+    }
+}
